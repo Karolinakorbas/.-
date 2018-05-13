@@ -1,11 +1,10 @@
 # test.gmail
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import unittest
-from test.test_robotparser import PasswordProtectedSiteTestCase
+    from selenium import webdriver
+    from selenium.webdriver.common.keys import Keys
+    import unittest
+    from test.test_robotparser import PasswordProtectedSiteTestCase
 
-class SendemailTest(unittest.TestCase):
-
+    class SendemailTest(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
@@ -36,6 +35,5 @@ class SendemailTest(unittest.TestCase):
         sendButton= driver.find_element_by_id("118")
         sendButton.click()
         self.driver.implicitly_wait(3000) 
-
-
-Assert(river.find_by_class_name("vh").text == "Your message has been sent. View message”)
+        
+        Assert(river.find_by_class_name("vh").text == "Your message has been sent. View message”)
