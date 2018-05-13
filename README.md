@@ -31,14 +31,13 @@
         emailtext.send_keys("This is message.")
         
         #and
-        
         sendButton= driver.find_element_by_id("118")
         sendButton.click()
         self.driver.implicitly_wait(3000) 
         
         Assert(river.find_by_class_name("vh").text == "Your message has been sent. View message”)
         
-         def loginToGmailAccount(self, user, password): 
+    def loginToGmailAccount(self, user, password): 
         driver = self.driver
         driver.get("https://www.google.com/gmail/")
         driver.implicitly_wait(1000)
