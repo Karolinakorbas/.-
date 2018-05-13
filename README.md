@@ -37,3 +37,22 @@
         self.driver.implicitly_wait(3000) 
         
         Assert(river.find_by_class_name("vh").text == "Your message has been sent. View message”)
+        
+         def loginToGmailAccount(self, user, password): 
+        driver = self.driver
+        driver.get("https://www.google.com/gmail/")
+        driver.implicitly_wait(1000)
+
+        loginField = driver.find_element_by_id ("identifierId")
+        loginField.send_keys(user)
+        
+        buttonNext = driver.find_element_by_class_name("RveJvd")
+        buttonNext.click()
+        self.driver.implicitly_wait(1000)    
+        
+        driver.find_element_by_name("password").send_kyes("password1")
+        driver.find_element_by_class_name("RveJvd").click()
+        self.driver.implicitly_wait(2000)
+        
+    def tearDown(self):
+        self.driver.close()
